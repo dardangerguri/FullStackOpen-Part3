@@ -38,6 +38,13 @@ app.get('/api/persons/:id', (request, response) => {
     response.status(404).end('Person not found')
 })
 
+app.delete('/api/persons/:id', (request, response) => {
+  const id = request.params.id
+  persons = persons.filter(person => person.id !== id)
+
+  response.status(204).end()
+})
+
 app.get('/info', (request, response) => {
   response.send(`
     <p>Phonebook has info for ${persons.length} people</p>
