@@ -5,13 +5,13 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf dist && git clone git@github.com:dardangerguri/FullStackOpen.git FullStackOpen && cd FullStackOpen/part2/phonebook && npm install && npm run build && cp -r dist ../../../ && cd ../../../ && rm -rf FullStackOpen"
   },
   "keywords": [],
   "author": "Dardan Gërguri",
   "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.21.2",
     "morgan": "^1.10.0"
   },
