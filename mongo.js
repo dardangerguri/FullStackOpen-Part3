@@ -39,10 +39,10 @@ if (process.argv.length > 3) {
   })
 }
 else {
-    Person.find({}).then(persons => {
-      console.log('phonebook:')
-      persons.forEach(person => {
-        console.log(`${person.name} ${person.number}`)
+  Person.find({}).then(persons => {
+    console.log('phonebook:')
+    persons.forEach(person => {
+      console.log(`${person.name} ${person.number}`)
     })
     mongoose.connection.close()
   })
